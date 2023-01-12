@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body{
+            background-color: darkolivegreen;
+            color: white;
+        }
+
+        h1{
+            color: white
+        }
+
+        div#res{
+            color: white;
+            font: normal 15pt Arial;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="" id="num1"> +
+    <input type="number" name="" id="num2">
+    <input type="button" value="calcular" onclick="calcular()"> 
+    <div id="res">
+        resultado
+    </div>
+
+    <script>
+
+        //var a = window.document.getElementById('somar')
+        //a.addEventListener('click', calcular)
+
+        function calcular(){
+            var c1 = window.document.getElementById('num1')
+            var c2 = window.document.getElementById('num2')
+            var n1 = Number(c1.value)
+            var n2 = Number(c2.value)
+            var res = window.document.getElementById('res')
+            var result = n1 + n2 
+            res.innerHTML = `a soma do ${n1} e ${n2} é: <strong>${result}</strong>`
+        }
+    </script>
+</body>
+</html>
